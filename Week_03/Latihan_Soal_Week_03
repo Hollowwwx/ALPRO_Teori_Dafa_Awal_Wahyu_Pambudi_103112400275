@@ -1,1 +1,35 @@
-cek
+#SOAL 2. CUMLAUDE
+
+// ALGORITMA UNTUK MENENTUKAN SEORANG MAHASISWA LULUS DENGAN CUMLAUDE ATAU TIDAK
+1. Mulai
+2. Siapkan alat tulis 
+3. (s) variabel untuk menyimpan jumlah semester
+4. (NE) variabel untuk menyimpan skor EPrT
+5. (c) variabel untuk menyimpan status kelulusan
+6. Tulis jumlah semester yang ditempuh (s)
+7. Tulis skor EPrT
+8. Periksa apakah (s) kurang dari atau sama dengan 8 dan (NE) lebih dari atau sama dengan 500
+9. Jika kedua kondisi terpenuhi, maka tulis (c) menjadi true
+10. Jika salah satu atau kedua kondisi tidak terpenuhi, maka tulis (c) menjadi false.
+11. Tulis Nilai (c)
+12. Selesai
+
+// CODINGAN/SOURCE CODE
+package main
+
+import "fmt"
+
+func main() {
+  var semester int
+  var nilaiEprt int
+
+  fmt.Print("Masukkan jumlah semester: ")
+  fmt.Scanln(&semester)
+
+  fmt.Print("Masukkan nilai EPrT: ")
+  fmt.Scanln(&nilaiEprt)
+
+  var cumlaude bool = semester <= 8 && nilaiEprt >= 500
+
+  fmt.Println("Cumlaude:", cumlaude)
+}
