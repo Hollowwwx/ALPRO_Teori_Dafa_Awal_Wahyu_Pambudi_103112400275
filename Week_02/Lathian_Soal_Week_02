@@ -1,1 +1,35 @@
-cek
+# SOAL 2. LINGKARAN
+
+// ALGORITMA UNTUK MENGHITUNG LUAS DAN KELILING LINGKARAN
+1. Mulai
+2. Siapkan Alat tulis
+3. (r) variable untuk jari-jari 
+4. (l) variable untuk luas
+5. (k) variable untuk keliling 
+6. (pi) konstanta dengan nilai 3.14159
+7. masukan nilai jari-jari lingkaran dan simpan nilainya ke variabel (r)
+8. Hitung luas lingkaran dengan rumus: luas = pi * r * r
+9. Hitung keliling lingkaran dengan rumus: keliling = 2 * pi * r
+10. Tulis hasil dari perhitungan luas lingkaran
+11. Tulis hasil dari perhitungan keliling lingkaran
+
+// CODINGAN/SOURCE CODE
+package main
+
+import "fmt"
+
+func main() {
+  var r float64
+  var luas float64
+  var keliling float64
+  const pi float64 = 3.141592653589793
+
+  fmt.Print("Masukkan jari-jari lingkaran: ")
+  fmt.Scanln(&r)
+
+  luas = pi * r * r
+  keliling = 2 * pi * r
+
+  fmt.Println("Luas lingkaran:", luas)
+  fmt.Println("Keliling lingkaran:", keliling)
+}
