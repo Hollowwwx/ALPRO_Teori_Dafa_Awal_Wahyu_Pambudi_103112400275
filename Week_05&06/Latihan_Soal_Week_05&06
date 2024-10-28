@@ -1,1 +1,46 @@
+#SOAL 8. FAKTORIAL
+// CODINGAN/SOURCE CODE
 
+package main
+
+import "fmt"
+
+func main() {
+  var n int
+
+  fmt.Print("Masukkan bilangan bulat positif: ")
+  fmt.Scanln(&n)
+
+  if n < 0 {
+    fmt.Println("Input Tidak Valid!")
+    return
+  }
+
+  for i := 1; i <= n; i++ {
+    isFactor := n%i == 0
+    fmt.Println(i, isFactor)
+  }
+}
+
+#SOAL 9. FAKTOR BILANGAN
+// CODINGAN/SOURCE CODE
+package main
+
+import "fmt"
+
+func main() {
+  var n int
+
+  fmt.Print("Masukkan bilangan bulat positif: ")
+  fmt.Scanln(&n)
+
+  if n < 0 {
+    fmt.Println("Input Tidak Valid!")
+    return
+  }
+
+  for i := 1; i <= n; i++ {
+    isFactor := n%i == 0
+    fmt.Println(i, isFactor)
+  }
+}
