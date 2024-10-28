@@ -20,16 +20,16 @@ package main
 import "fmt"
 
 func main() {
-  var semester int
-  var nilaiEprt int
+  var s int
+  var NE int
 
   fmt.Print("Masukkan jumlah semester: ")
-  fmt.Scanln(&semester)
+  fmt.Scanln(&s)
 
   fmt.Print("Masukkan nilai EPrT: ")
-  fmt.Scanln(&nilaiEprt)
+  fmt.Scanln(&NE)
 
-  var cumlaude bool = semester <= 8 && nilaiEprt >= 500
+  var c bool = s <= 8 && NE >= 500
 
-  fmt.Println("Cumlaude:", cumlaude)
+  fmt.Println("Cumlaude:", c)
 }
