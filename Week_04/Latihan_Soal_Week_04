@@ -1,1 +1,62 @@
+#SOAL 5. INVESTASI SAHAM
 
+// CODINGAN/SOURCE CODE
+package main
+
+import "fmt"
+
+// (HB = Harga Beli)
+// (HJ = Harga Jual)
+// (JS = Jual Saham)
+
+func main() {
+  var HB, HJ float64
+  var JS int
+
+  fmt.Print("Masukkan harga beli saham: ")
+  fmt.Scanln(&HB)
+
+  fmt.Print("Masukkan harga jual saham: ")
+  fmt.Scanln(&HJ)
+
+  fmt.Print("Masukkan jumlah saham: ")
+  fmt.Scanln(&JS)
+
+  // (Ti = Total investasi)
+  // (Tp = Total penjualan)
+  // (Kk = Keuntungan kotor)
+  // (Bt = Biaya transaksi)
+  // (Pk = Pajak keuntungan)
+
+  // Menghitung total investasi awal
+  Ti := HB * float64(JS)
+  fmt.Println("Total Investasi:", Ti)
+
+  // Menghitung total penjualan
+  Tp := HJ * float64(JS)
+  fmt.Println("Total Penjualan:", Tp)
+
+  // Menghitung keuntungan kotor
+  Kk := Tp - Ti
+  fmt.Println("Keuntungan Kotor:", Kk)
+
+  // Menghitung biaya transaksi
+  Bt := 0.002 * Tp
+  fmt.Println("Biaya Transaksi:", Bt)
+
+  // Menghitung pajak keuntungan
+  var Pk float64
+  if Kk > 0 {
+    Pk = 0.1 * Kk
+  } else {
+    Pk = 0 // Tidak ada pajak jika rugi
+  }
+
+  fmt.Println("Pajak Keuntungan:", Ti)
+
+  // (Kb = Keuntungan Bersih)
+  // Menghitung keuntungan bersih
+  Kb := Kk - Bt - Pk
+
+  fmt.Println("Keuntungan bersih:", Kb)
+}
