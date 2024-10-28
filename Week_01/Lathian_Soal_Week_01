@@ -1,1 +1,14 @@
-cek
+#SOAL 5. KOPER
+
+1. Mulai
+2. Siapkan Kalkulator
+3. Siapkan Alat Tulis
+4. Catat Jumlah Penumpang (n)
+5. Buat Variable total_berat dan set nilainya Menjadi 0
+6. Timbang Berat Koper ke kalkulator
+7. Tekan tombok "+" Pada kakulator
+8. Catat berat koper pada kertas
+9. Setelah berat semua koper dijumlahkan, tekan tombol "=" pada kalkulator untuk mendapatkan total_berat
+10. Bagi total_berat dengan jumlah penumpang (n) menggunakan kalkulator
+11. Hasil pembagian tersebut adalah rata-rata berat koper
+12. Selesai
