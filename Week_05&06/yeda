@@ -1,5 +1,29 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var char1, char2 string
+
+	fmt.Println("Masukkan dua buah karakter yang dipisahkan oleh spasi:")
+	fmt.Scanln(&char1, &char2)
+
+	// Ubah kedua karakter menjadi huruf kecil untuk mempermudah perbandingan
+	char1 = strings.ToLower(char1)
+	char2 = strings.ToLower(char2)
+
+	if char1 == char2 {
+		fmt.Println("Ya")
+	} else {
+		fmt.Println("Tidak")
+	}
+}
+
+package main
+
 import "fmt"
 
 func main() {
@@ -12,7 +36,7 @@ func main() {
 		return
 	}
 
-	deret := make(int, n)
+	deret := make([]int, n)
 	fmt.Println("Masukkan elemen-elemen deret:")
 	for i := 0; i < n; i++ {
 		fmt.Scan(&deret[i])
@@ -33,36 +57,8 @@ func main() {
 	if valid {
 		// Hitung jumlah total deret aritmatika
 		jumlah := n * (deret[0] + deret[n-1]) / 2
-
-package main
-
-import "fmt"
-
-func main() {
-	var n int
-	fmt.Print("Masukkan bilangan bulat ganjil (n): ")
-	fmt.Scanln(&n)
-
-	if n%2 == 0 {
-		fmt.Println("Input harus bilangan ganjil.")
-		return
-	}
-
-	// Membuat pola X
-	for i := 0; i < n; i++ {
-		for j := 0; j < n; j++ {
-			// Kondisi untuk mencetak angka
-			if i == j || i+j == n-1 {
-				// Mencetak angka sesuai pola
-				if i <= n/2 {
-					fmt.Print(i+1, " ")
-				} else {
-					fmt.Print(n-i, " ")
-				}
-			} else {
-				fmt.Print("  ") // Menambahkan spasi untuk membentuk pola X
-			}
-		}
-		fmt.Println() // Pindah ke baris berikutnya
+		fmt.Println("Jumlah total:", jumlah)
+	} else {
+		fmt.Println("Bukan deret aritmatika")
 	}
 }
