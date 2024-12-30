@@ -1,0 +1,22 @@
+//SOAL NO.7 SUM GANJIL
+
+CODE:
+
+package main
+
+import "fmt"
+
+func main() {
+	var a, b, sum int
+
+	fmt.Print("Masukkan nilai a dan b: ")
+	fmt.Scan(&a, &b)
+
+	a += (a + 1) % 2
+
+	for i := a; i <= b; i += 2 {
+		sum += i
+	}
+
+	fmt.Println("Jumlah bilangan ganjil antara", a, "dan", b, "adalah", sum)
+}

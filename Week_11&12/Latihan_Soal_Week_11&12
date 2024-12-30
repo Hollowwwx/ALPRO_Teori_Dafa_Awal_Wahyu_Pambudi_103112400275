@@ -1,0 +1,27 @@
+//SOAL NO.6 Tangki Air
+
+package main
+
+import "fmt"
+
+func main() {
+	var T, V, isiSekarang int
+
+	fmt.Print("Masukkan kapasitas tangki (T): ")
+	fmt.Scan(&T)
+
+	isiSekarang = 0
+
+	for isiSekarang < T {
+		fmt.Print("Masukkan volume air dalam ember (V): ")
+		fmt.Scan(&V)
+
+		isiSekarang += V
+
+		if isiSekarang >= T {
+			fmt.Println("true")
+		} else {
+			fmt.Println("false")
+		}
+	}
+}
